@@ -1,0 +1,19 @@
+# $OpenBSD: dot.profile,v 1.7 2020/01/24 02:09:51 okan Exp $
+#
+# sh/ksh initialization
+
+export PATH HOME TERM
+
+
+# customizations for commit--blog app
+
+# niceness
+export PATH=$HOME/app/venv/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin
+
+# app config
+export SERVER_NAME=commit--blog.com
+export DATABASE_URL=sqlite:////var/commit--store/db.sqlite3
+export SECRET_KEY=
+
+export GITHUB_CLIENT_ID=
+export GITHUB_CLIENT_SECRET=

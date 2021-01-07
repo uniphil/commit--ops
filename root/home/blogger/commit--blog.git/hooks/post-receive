@@ -1,0 +1,13 @@
+#!/bin/ksh
+set -eux
+
+deployed=0
+
+while read oldrev newrev refname; do
+  if [ "$deployed" -eq 1 ]; then
+    echo "warning: more than one ref pushed. skipping $newrev $refname" >&2
+    exit 1
+  fi
+  /home/blogger/deploy.sh $newrev
+  deployed=1
+done

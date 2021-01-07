@@ -1,0 +1,27 @@
+#!/bin/sh
+
+root=/var/commit--blog
+pfile=$root/gunicorn.pid
+
+daemon="gunicorn --daemon --pid $pfile --no-sendfile"
+daemon_user="commit--blog"
+daemon_flags="--workers 2 --bind 127.0.0.1:9000 wsgi:app"  # todo maybe --chdir app 
+
+. /etc/rc.d/rc.subr
+
+rc_check() {
+    cat $pfile | xargs ps -p > /dev/null
+}
+
+rc_reload() {
+    cat $pfile | xargs kill -HUP
+}
+
+rc_stop() {
+    cat $pfile | xargs kill
+}
+
+# use a login shell so that ~/.profile gets sourced
+rcexec="$rcexec -l"
+
+rc_cmd $1
