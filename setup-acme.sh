@@ -43,6 +43,6 @@ acme.sh --issue \
     --dns dns_cf \
     --domain "*.commit--blog.com" \
     --domain "*.staged.commit--blog.com" \
-    --cert-file "/etc/ssl/commit--blog.com:443.crt" \
-    --key-file "/etc/ssl/private/commit--blog.com:443.key" \
+    --fullchain-file "/etc/ssl/server.crt" \
+    --key-file "/etc/ssl/private/server.key" \
     --reloadcmd "doas relayctl reload"
