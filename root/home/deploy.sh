@@ -5,7 +5,7 @@ REV=$1
 export GIT_DIR=/home/blogger/commit--blog.git
 
 GIT_WORK_TREE=/var/commit--blog/ git -c advice.detachedHead=false checkout $REV
-doas -u commit--blog /var/commit--blog/venv/bin/pip install -r /var/commit--blog/requirements.txt
+doas -u commit--blog /var/commit--blog/venv/bin/pip --disable-pip-version-check install -r /var/commit--blog/requirements.txt
 
 doas /etc/rc.d/gunicorn reload
 
