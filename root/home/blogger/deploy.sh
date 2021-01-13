@@ -8,7 +8,7 @@ GIT_WORK_TREE=/var/commit--blog/ git -c advice.detachedHead=false checkout $REV
 GIT_WORK_TREE=/var/commit--blog/ git reset --hard
 GIT_WORK_TREE=/var/commit--blog/ git checkout -- '*'
 
-doas -u commit--blog /var/commit--blog/venv/bin/pip install -r /var/commit--blog/requirements.txt
+doas -u commit--blog /var/commit--blog/venv/bin/pip --disable-pip-version-check install -r /var/commit--blog/requirements.txt
 
 doas /etc/rc.d/gunicorn reload
 
