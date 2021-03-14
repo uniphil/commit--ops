@@ -1,0 +1,4 @@
+#!/bin/ksh
+set -eu; fp=$1
+
+chmod 0600 $fp  # should not be needed? since we're just editing an existing file?
