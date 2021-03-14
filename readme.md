@@ -1,3 +1,5 @@
+a diagram that will probably quickly go out of date:
+
 ```
    CF DNS          public      public
      ^             :80 http    :443 https          :22 ssh
@@ -17,7 +19,7 @@
        +-------------------+          +--------------------v--+
        |                   |          |                       |
        | /var/www/htdocs/  |          | var/commit--blog/wsgi |
-       |                   |          | gunicorn              |
+       |                   |          | gunicorn (+ newrelic) |
        | httpd             |          |                       |
        |                   |          +--+-@commit--blog-+----+
        +---@www------------+             |       |       |

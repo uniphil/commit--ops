@@ -3,7 +3,7 @@
 root=/var/commit--blog
 pfile=$root/gunicorn.pid
 
-daemon="gunicorn --daemon --pid $pfile --no-sendfile"
+daemon="newrelic-admin run-program gunicorn --daemon --pid $pfile --no-sendfile"
 daemon_user="commit--blog"
 daemon_flags="--workers 2 --bind 127.0.0.1:9000 wsgi:app"  # todo maybe --chdir app 
 

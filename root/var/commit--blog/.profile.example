@@ -17,3 +17,7 @@ export SECRET_KEY=
 
 export GITHUB_CLIENT_ID=
 export GITHUB_CLIENT_SECRET=
+
+# error monitoring
+export NEW_RELIC_APP_NAME=commit--blog
+export NEW_RELIC_LICENSE_KEY=
