@@ -6,6 +6,6 @@
   "GITHUB_CLIENT_ID": null,
   "GITHUB_CLIENT_SECRET": null,
 
-  "NEW_RELIC_APP_NAME": "commit--blog",
   "NEW_RELIC_LICENSE_KEY": null,
+  "NEW_RELIC_CONFIG_FILE": "/var/commit--blog/newrelic.ini"
 }
