@@ -5,19 +5,5 @@
 export PATH HOME TERM
 
 
-# customizations for commit--blog app
-
 # niceness
 export PATH=$HOME/app/venv/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin
-
-# app config
-export SERVER_NAME=commit--blog.com
-export DATABASE_URL=sqlite:////var/commit--store/db.sqlite3
-export SECRET_KEY=
-
-export GITHUB_CLIENT_ID=
-export GITHUB_CLIENT_SECRET=
-
-# error monitoring
-export NEW_RELIC_APP_NAME=commit--blog
-export NEW_RELIC_LICENSE_KEY=

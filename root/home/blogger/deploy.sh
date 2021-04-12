@@ -10,7 +10,7 @@ GIT_WORK_TREE=/var/commit--blog/ git checkout -- '*'
 
 doas -u commit--blog /var/commit--blog/venv/bin/pip --disable-pip-version-check install -r /var/commit--blog/requirements.txt
 
-doas /etc/rc.d/gunicorn reload
+doas /usr/local/bin/supervisorctl restart gunicorn
 
 GIT_WORK_TREE=/var/www/htdocs/ git checkout $REV -- static
 

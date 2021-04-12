@@ -1,0 +1,11 @@
+{
+  "SERVER_NAME": "commit--blog.com",
+  "DATABASE_URL": "sqlite:////var/commit--store/db.sqlite3",
+  "SECRET_KEY": null,
+
+  "GITHUB_CLIENT_ID": null,
+  "GITHUB_CLIENT_SECRET": null,
+
+  "NEW_RELIC_APP_NAME": "commit--blog",
+  "NEW_RELIC_LICENSE_KEY": null,
+}

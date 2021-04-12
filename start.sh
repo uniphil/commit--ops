@@ -11,7 +11,6 @@ rcctl enable httpd
 rcctl start  httpd
 rcctl reload relayd
 
-# OUR APP yeaaaa
-rcctl enable gunicorn
-rcctl start  gunicorn
-rcctl reload gunicorn
+# supervisord for our servicessss
+rcctl enable supervisord
+rcctl start  supervisord

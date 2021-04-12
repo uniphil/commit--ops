@@ -1,1 +1,3 @@
 .DS_Store
+
+root/root/gunicorn-environment.json

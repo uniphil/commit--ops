@@ -47,3 +47,17 @@ a diagram that will probably quickly go out of date:
 ```sh
 git remote add server ssh://blogger@172.81.178.30/home/blogger/commit--blog.git
 ```
+
+updating environment variables
+---
+
+```bash
+su root
+cd /root
+nano gunicorn-environment.json
+# edit and save the environment object
+./supervisor-environmentize.py gunicorn-environment.json
+# copy the printed line
+nano /etc/supervisord.d/gunicorn.ini
+# paste it to replace the `environment=` line's value
+```
