@@ -23,9 +23,6 @@ chown acme /etc/ssl/private
 #relayd keypair default: /etc/ssl/<name>:<port>.crt
 #relayd keypair default: /etc/ssl/private/<name>:<port>.key
 
-# Edit your doas.conf to allow the acme user to reload (not restart) nginx
-echo 'permit nopass acme cmd relayctl args reload' >> /etc/doas.conf
-
 # Now change to the ACME user
 su - -s /bin/ksh acme
 export HOME=/home/acme
@@ -45,4 +42,4 @@ acme.sh --issue \
     --domain "*.staged.commit--blog.com" \
     --fullchain-file "/etc/ssl/server.crt" \
     --key-file "/etc/ssl/private/server.key" \
-    --reloadcmd "doas relayctl reload"
+    --reloadcmd "doas /etc/rc.d/relayd reload"
