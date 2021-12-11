@@ -61,3 +61,14 @@ nano gunicorn-environment.json
 nano /etc/supervisord.d/gunicorn.ini
 # paste it to replace the `environment=` line's value
 ```
+
+^^ i probably already messed that up by directly editing gunicorn.ini (fixme)
+
+running db migrations (or ./manage.py generally)
+---
+
+- switch users to `commit--blog`
+- source `.profile`: `. /var/commit--blog/.profile` (abs path **required** -- i forget this every time)
+- double check that the db path is there `echo $DATABASE_URL`
+
+then it should be good to go
