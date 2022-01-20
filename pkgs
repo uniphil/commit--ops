@@ -3,4 +3,4 @@ git
 libgit2
 py3-cryptography
 python3
-supervisord
+supervisor
