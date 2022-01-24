@@ -8,6 +8,6 @@ while read oldrev newrev refname; do
     echo "warning: more than one ref pushed. skipping $newrev $refname" >&2
     exit 1
   fi
-  /home/blogger/deploy.sh $newrev
+  /home/publisher/deploy.sh $newrev
   deployed=1
 done
