@@ -23,7 +23,7 @@ addfstab() {
 addfstab f4296ea28c048d37 /var/commit--store
 addfstab 4896977cdc7f10ba /var/commit--repos
 
-msg Please check that the grepped lines from fstab match the disk labels from hw.disknames
+msg Please check that the grepped lines from fstab match the disk labels from \`sysctl hw.disknames\`
 msg Please edit /etc/fstab and add \'softdep\' to every rw mount option
 
 msg Ok
