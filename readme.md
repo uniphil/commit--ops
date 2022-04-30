@@ -107,7 +107,7 @@ spinning up a new machine
    pkg_add curl
    curl 'https://github.com/uniphil/commit--ops/archive/refs/heads/main.tar.gz' -Lo ops.tar.gz
    tar xzf ops.tar.gz
-   cd cd commit--ops-main/
+   cd commit--ops-main/
    ```
 
 TODO: set disks to mount with Soft Updates -- https://www.openbsd.org/faq/faq14.html#SoftUpdates

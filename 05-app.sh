@@ -33,12 +33,15 @@ fi
 msg Install app virtualenv
 run su -s /bin/ksh blogger -c 'cd /var/commit--blog/ && python3 -m venv venv'
 
+msg Install wheel to the virtualenv
+run su -s /bin/ksh blogger -c '/var/commit--blog/venv/bin/pip install wheel'
+
 msg Share blogger\'s stuff with just www
 run chmod -R 770 /var/commit--blog
 run chown -R blogger:www /var/commit--blog
 
 msg Setup static directory
-run mkdir -p /var/static/htdocs/static
+run mkdir -p /var/www/htdocs/static
 run chown www:www /var/www/htdocs/static
 run chmod 774 /var/www/htdocs/static
 
